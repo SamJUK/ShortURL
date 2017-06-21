@@ -1,0 +1,116 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+body{
+	background-color: #222;
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+}
+#bg{
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	position: absolute;
+	display: block;
+	background-image: url('http://orig10.deviantart.net/41bc/f/2014/135/5/c/grunge_texture_4_by_allthingsprecious-d7ifmb3.jpg');
+	background-size: 100%;
+	opacity: .2;
+	z-index: 1;
+}
+#container{
+	flex-direction: column;
+	position: relative;
+	opacity: 1;
+	width: 75%;
+	margin: auto;
+	text-align: center;
+	font-color: #F2F2F2;
+	z-index: 5;
+}
+#container #header{
+	margin-top: 20px;
+	margin-bottom: 75px;
+}
+#container #header #url{
+	background-color: #3997b5;
+	padding: 5px 15px;
+	color: #F2F2F2;
+	font-weight: bolder;
+	border-radius: 7px;
+}
+#container #header #shortner{
+	color: #3997b5;
+	font-weight: bold;
+	font-size: 18px;
+}
+#container #alert{
+	display: block;
+	color: #F2F2F2;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+#container #input{
+	display: block;
+	margin: 50px 0px;
+	align-items: center;
+}
+#container #input #url{
+	vertical-align: middle;
+	background-color: rgba(0,0,0,.5);
+	border: 0px;
+	padding: 10px;
+	border-radius: 7px 0px 0px 7px;
+	outline: none;
+	width: 50%;
+	color: #F2F2F2;
+}
+#container #input i{
+	margin-left: -4px;
+	vertical-align: middle;
+	border-radius: 0px 7px 7px 0px;
+	background-color: rgba(0,0,0,.5);
+	padding: 6px 10px 5px 10px;
+	color: #F2F2F2;
+	font-weight: bold;
+	cursor: pointer;
+}
+#errors{
+	display: block;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	z-index: 10;
+}
+#errors div{
+	display: block;
+	min-width: 100%;
+	padding: 15px 25px;
+	border: 1px solid rgba(0,0,0,.5);
+	background-color: lightgrey;
+	vertical-align: middle;
+	cursor: pointer;
+}
+#errors div i{
+	display: inline-block;
+    border-radius: 50%;
+    border: 2px solid rgba(0,0,0,0.2);
+    color: rgba(0,0,0,.2);
+    position: absolute;
+    right: 12px;
+    margin-top: -5px;
+}
+#errors .error{
+	background-color: red;
+}
+#errors .warning{
+	background-color: orange;
+}
+#errors .alert{
+	background-color: lightgrey;
+}
+#errors .success{
+	background-color: green;
+}

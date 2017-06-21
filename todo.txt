@@ -1,0 +1,4 @@
+Check for duplicates
+	If found alert and display current shortlink
+
+UI
