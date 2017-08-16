@@ -16,32 +16,38 @@ body{
 	position: absolute;
 	display: block;
 	background-image: url('http://orig10.deviantart.net/41bc/f/2014/135/5/c/grunge_texture_4_by_allthingsprecious-d7ifmb3.jpg');
-	background-size: 100%;
+	background-size: cover;
 	opacity: .2;
 	z-index: 1;
-}
+}	
 #container{
 	flex-direction: column;
+	display: flex;
 	position: relative;
+	justify-content: center;
 	opacity: 1;
 	width: 75%;
 	margin: auto;
 	text-align: center;
 	font-color: #F2F2F2;
 	z-index: 5;
+	min-height: 100vh;
 }
-#container #header{
-	margin-top: 20px;
-	margin-bottom: 75px;
+#header{
+	display: block;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	margin: 20px auto 75px auto;
 }
-#container #header #url{
+#header #url{
 	background-color: #3997b5;
 	padding: 5px 15px;
 	color: #F2F2F2;
 	font-weight: bolder;
 	border-radius: 7px;
 }
-#container #header #shortner{
+#header #shortner{
 	color: #3997b5;
 	font-weight: bold;
 	font-size: 18px;
@@ -54,7 +60,7 @@ body{
 }
 #container #input{
 	display: block;
-	margin: 50px 0px;
+	margin: 15px 0px;
 	align-items: center;
 }
 #container #input #url{
@@ -113,4 +119,44 @@ body{
 }
 #errors .success{
 	background-color: green;
+}
+#sl{
+	color: #F2F2F2;
+	font-size: 18px;
+	font-weight: bold;
+}
+#homebtn{
+	text-decoration: none;
+    color: #F2F2F2;
+    font-weight: bold;
+    background-color: darkred;
+    padding: 7px 20px;
+    display: block;
+    width: 100px;
+    margin: 15px auto;
+    border-radius: 7px;
+}
+#footer{
+	display: block;
+	width: calc(100% - 50px);
+	position: absolute;
+	bottom: 0;
+	height: 15px;
+	background-color: rgba(0,0,0,.4);
+	z-index: 10;
+	padding: 15px 25px;
+	color: #FEFEFE;
+	color: rgba(255,255,255,.4);
+}
+#footer .right{
+	float: right;
+	text-align: right;
+}
+#footer a{
+	color: #3997b5;
+	text-decoration: none;
+}
+#footer a:hover{
+	font-weight: bolder;
+	color: #3997b3;
 }

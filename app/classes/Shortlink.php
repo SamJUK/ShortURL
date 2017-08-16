@@ -3,7 +3,7 @@
 class Shortlink 
 {
 
-	protected $htaccess = ".htaccess";
+	protected $htaccess = "../.htaccess";
 	protected $charString = "abcdefghkmoprstuvxyz"; // As a string - exploded to array later ( Better readabilty )
 	protected $charArray = [];
 	protected $shortLength = 5;
@@ -41,7 +41,7 @@ class Shortlink
 		};
 
 		// Echo short url to page
-		//echo "Your new short URL is: http://sam.dev/shortLink2/{$shortURL}";
+		// echo "Your new short URL is: http://sam.dev/shortLink2/{$shortURL}";
 	}
 
 	/**
@@ -156,7 +156,7 @@ class Shortlink
 	{
 		// Open HTACCESS and read each line
 		$redirects = [];
-		$lines = file('.htaccess');
+		$lines = file('../.htaccess');
 		foreach ($lines as $line_index => $line) {
 			$exploded = explode(' ', $line);
 			// For each rewrite rule
@@ -170,10 +170,10 @@ class Shortlink
 	}
 
 	/**
+	 * Normalise URL string's; E.G make sure all url's have a HTTP Prefix etc
 	 *
-	 *
-	 *
-	 *
+	 * @param String $url Url to normalise
+	 * @return String Normalised URL
 	 */
 	private function normaliseLongURL($url)
 	{
